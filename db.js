@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 // Connect to MongoDB
-mongoose.connect(mongoURI, {
+mongoose.connect(process.env.mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
