@@ -22,6 +22,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Pull image from docker hub
-        run: docker push natztheking/nodejs-app:latest
+        run: docker pull natztheking/nodejs-app:latest
       - name: Run Docker Container
         run: docker run -d -p 3000:3000 --name nodejs-app-container -e MONGOURI='${{secrets.MONGOURI}}'
