@@ -29,7 +29,7 @@ router.post("/", async (req, res) => {
       name: req.body.name,
       familyname: req.body.familyname,
       email: req.body.email,
-      phonenumber: req.body.phonenumber, // This is optional
+      // phonenumber: req.body.phonenumber, // This is optional
     });
 
     // Save the new user to the database
