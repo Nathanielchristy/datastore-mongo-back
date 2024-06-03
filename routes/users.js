@@ -6,7 +6,7 @@ const router = express.Router();
 // Route to get all users
 router.get("/", async (req, res) => {
   try {
-    const users = await User.find();
+    const users = await User.find().sort({ _id: -1 }); // Sort by _id in descending order
     res.json(users);
   } catch (error) {
     console.error("Error retrieving users:", error);
